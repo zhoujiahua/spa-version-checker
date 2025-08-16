@@ -1,0 +1,41 @@
+{
+    "name": "spa-version-checker",
+    "version": "0.1.0",
+    "description": "Framework-agnostic SPA runtime version update detector (TypeScript).",
+    "license": "MIT",
+    "author": "Your Name",
+    "sideEffects": false,
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "prepublishOnly": "npm run build"
+    },
+    "peerDependencies": {
+        "element-plus": ">=2.6.0"
+    },
+    "peerDependenciesMeta": {
+        "element-plus": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "typescript": "^5.6.2",
+        "tsup": "^8.1.0"
+    }
+}
