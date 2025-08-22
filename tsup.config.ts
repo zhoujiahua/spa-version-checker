@@ -10,4 +10,7 @@ export default defineConfig({
     clean: true,
     minify: true,
     target: 'es2020',
+    treeshake: true,
+    // mark UI libs as external if you reference them so consumers own the dep
+    external: ['vue', 'react', 'element-plus', 'antd']
 });
